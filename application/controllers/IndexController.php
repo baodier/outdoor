@@ -12,7 +12,7 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
-        if(isset($_SESSION['user'])) $this->_redirect("/login");
+        //if(isset($_SESSION['user'])) $this->_redirect("/login");
     }
 
 

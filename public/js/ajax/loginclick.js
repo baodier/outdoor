@@ -12,7 +12,7 @@ function loginClick(){
     $.post('/login/check',{email:email, pwd:password},function(data){
         var obj = jQuery.parseJSON(data);
         if (obj.code == 'success') {
-            window.location.href="/login";
+            window.location.href="/";
         } else{
             document.getElementById('login_pwd').value = '';
             document.getElementById('login_pwd').placeholder = '用户名密码不匹配！';

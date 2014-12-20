@@ -9,13 +9,13 @@
 
 class User extends Zend_Db_Table{
 
-    protected $_name = 'user';  //表名
-    protected $_primary='userid';		//主键名
+    protected $_name = 'webuser';  //表名
+    protected $_primary='id';		//主键名
 
     public function checkUser($email,$pwd ){
         $pwd = md5($pwd);
         $select = $this->select();
-        $select->where('email in (?)',$email);
+        $select->where('username in (?)',$email);
         $select->where('password in (?)',$pwd);
         $result = $this->fetchAll($select)->toArray();
 
@@ -25,7 +25,7 @@ class User extends Zend_Db_Table{
 
     public function getUserInfoByEmail($email){
         $select = $this->select();
-        $select->where('email in (?)',$email);
+        $select->where('username in (?)',$email);
         $result = $this->fetchAll($select)->toArray();
         if($result) return $result[0];
         else return null;
@@ -33,7 +33,7 @@ class User extends Zend_Db_Table{
 
     public function isExist($email){
         $select = $this->select();
-        $select->where('email in (?)',$email);
+        $select->where('username in (?)',$email);
         $result = $this->fetchAll($select)->toArray();
 
         if(count($result) >= 1) return true;
