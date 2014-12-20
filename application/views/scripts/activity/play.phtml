@@ -1,0 +1,104 @@
+
+<link href="/css/tl_style.css" type="text/css" rel="stylesheet"/>
+
+<?php echo $this->render('login/navbar_login.phtml') ?>
+
+<div class="container-fluid container" >
+    <div class="row-fluid">
+        <div class="span9" style="padding-top: 100px">
+
+            <div id="mainbar">
+                <div class="subheader">
+                    <h1>校园活动</h1>
+                    <div id="tabs">
+                        <a href="/book/preview?sort=vote">全部</a>
+                        <a class="<?php if($this->action == 'play') echo 'youarehere' ?>" href="/activity/play">演出</a>
+                        <a href="/book?sort=month">电影</a>
+                        <a href="/book/read?sort=all">讲座</a>
+                        <a href="/book/read?sort=vote">学生活动</a>
+                        <a href="/book/read?sort=tag">宣讲会</a>
+
+                    </div>
+                </div>
+
+                <div class="subtabs" id="tabs-interval">
+                    <a class="<?php if($this->type == 'end') echo 'youarehere' ?>" href="/activity/play?type=end">已结束</a>
+                    <a class="<?php if($this->type == 'sale') echo 'youarehere' ?>" href="/activity/play?type=sale">售票中</a>
+                    <a class="<?php if($this->type == 'wait') echo 'youarehere' ?>" href="/activity/play?type=wait">待售票</a>
+                    <a class="<?php if($this->type == 'all') echo 'youarehere' ?>" href="/activity/play?type=all">全部</a>
+                </div>
+
+                <div class="alert alert-success clearfix clearboth" style="padding-right: 12px;">
+                </div>
+
+                <div class="book-items">
+
+                    <?php foreach ($this->resultList as $activity):?>
+
+                    <div class="row book-item">
+                        <div class="span1">
+                            <div class="stats">
+                                <div class="votes">
+                                    <strong>68</strong>喜欢
+                                </div>
+                                <div class="answered">
+                                    <strong>12</strong>评论
+                                </div>
+
+                            </div>
+                            <div class="views-orange">
+                                <?php
+                                    if($activity['art_sale_state'] == 1) echo '售票中';
+                                    else if($activity['art_sale_state'] == 0) echo '待售票';
+                                    else if($activity['art_sale_state'] == -1) echo '已结束';
+                                ?>
+                            </div>
+                        </div>
+                        <div class="span8">
+                            <h3>
+                                <a class="question-hyperlink" href="/book/51"><?php echo $activity['art_title']; ?></a>
+                            </h3>
+                            <div class="status-date">
+                                [演出方] <?php echo $activity['art_actor'];?>  　
+                                [时间] <?php echo $activity['art_play_starttime'];?>  　
+                                [演出地点] <?php echo $activity['art_place'];?>　　
+                            </div>
+                            <p>描述还没有爬好<a href="/book/51">[…]</a>
+                            </p>
+                            <p>
+                                <a class="post-tag" href="/book/tagged/47" tagid="47">售票中</a>
+                                <a class="post-tag" href="/book/tagged/281" tagid="281">昆曲</a>
+                                <a class="post-tag" href="/book/tagged/438" tagid="438">折子戏</a>
+                            </p>
+                        </div>
+                        <div class="span3" >
+                            <a href="/book/51" class="book-cover-box pull-right">
+                                <img  class="bookcover" alt="iPhone与iPad开发实战" src="/img/demo2.jpeg">
+                                <span class="ebook"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <hr class="dashed">
+
+                    <?php endforeach;?>
+
+
+
+                    <div class="PagedList-pager">
+                        <?php echo $this->sepHtml; ?>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="span3" style="padding-top: 100px">
+            <!--Body content-->
+
+        </div>
+    </div>
+</div>
+
+<?php echo $this->render('index/footer.phtml') ?>

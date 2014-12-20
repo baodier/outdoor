@@ -1,0 +1,42 @@
+<div class="navbar navbar-fixed-top">
+    <div id="hidden_userid" class="" style="display: none"><?php echo $_SESSION['user']['id'];?></div>
+    <div class="navbar-inner" >
+        <div class="container" >
+            <a class="brand" href="/" ><img src="/img/logo_small.png"/>校园百事通</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="divider-vertical"></li>
+                    <li><a href="#">校园服务</a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#">跳蚤市场</a></li>
+                    <li class="divider-vertical"></li>
+                    <li class="<?php if($this->controller=='activity') echo "active" ?>"><a href="/activity/play?type=all">校园活动</a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#">线上组队</a></li>
+                    <li class="divider-vertical"></li>
+                </ul>
+
+
+            </div><!--/.nav-collapse -->
+            <ul  class="nav pull-right ">
+                <li><a href="#" style="font-size: 15px">欢迎您，<?php echo $_SESSION['user']['username'];?></a></li>
+                <li class="divider-vertical"></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" onmouseover="dropDown();">账号 <i class="icon-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><?php echo $_SESSION['user']['username'];?></a></li>
+                        <li class="divider"></li>
+                        <li><a href="/setting/index"><i class="icon-edit"></i> 个人信息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/login/logout"><i class="icon-off"></i> 退出</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<script defer src="/js/navbar_login.js"></script>

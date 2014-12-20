@@ -1,0 +1,141 @@
+.photoCrop {
+	width:600px;
+	height:430px;
+	margin:40px auto 0;
+	*margin:0;
+	/*border:1px solid #F00;*/
+	padding:10px 0 0 20px;
+}
+
+/*左边区域,显示原图像*/
+.leftArea {	
+	float:left;
+	margin-top:10px;
+}
+
+.avatar_content {	/*原图像*/
+    border:3px double #ccc;
+    width:300px;
+    height:300px;
+}
+
+#loading {
+	display:none;
+	margin:134px;
+}
+/*******end leftArea*******/
+
+/*右边区域,头像预览区域*/
+.rightArea {	
+	float:left;
+	margin-left:40px;
+	margin-top:10px;
+}
+
+.line1 {	/*大头像所在区域*/
+	float:left;
+	margin-left:0px;
+	margin-top:40px;
+}
+
+.photo1 {	/*大头像预览*/
+    border:1.5px double #ccc;
+    width:140px;
+    height:140px;
+    overflow:hidden;
+	padding:0;
+	
+}
+
+.line2 {	/*中头像所在区域*/
+	/*float:bottom;*/
+	position:relative;
+	top:80px;
+	left:-5px;
+	margin-left:200px;
+	margin-top:-40px;
+}
+
+.line3 {	/*小头像所在区域*/
+	/*float:bottom;*/
+	position:relative;
+	top:80px;
+	left:60px;
+	*left:20px;
+	/*margin-left:40px;*/
+}
+
+.photo2 {
+	border:1.5px double #ccc;
+    width:50px;
+    height:50px;
+    overflow:hidden;
+	padding:0;
+	margin-left:8px;
+}
+
+.photo3 {
+	border:1.5px double #ccc;
+    width:30px;
+    height:30px;
+    overflow:hidden;
+	padding:0;
+	margin-top:20px;
+	margin-left:18px;
+}
+
+.description {
+	font-size:12px;
+	color:#9A9A9A;
+	position:relative;
+	top:5px;
+	left:5px
+}
+
+.description1 {
+	font-size:12px;
+	color:#9A9A9A;
+	position:relative;
+	top:5px;
+	left:-40px;
+	*left:0px;
+	
+}
+
+.des1 {
+	margin-left:5px;
+}
+
+.multiSymbol {
+	font-family:Arial;
+	font-size:12px;
+	line-height:12px;
+}
+
+.clear {
+	clear:both;
+}
+/************end rightArea*************/
+
+.cutForm {
+	margin-top:20px;
+	float:left;
+}
+
+.cancel {
+	margin:20px 0 0 10px;
+}
+
+.input{
+	position:relative;
+	left:-40px;
+
+}
+
+.tableForm{
+	*position:relative;
+	*left:-138px;
+}
+.gray{
+	*line-height:30px;
+}

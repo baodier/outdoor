@@ -1,0 +1,282 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 18px;
+}
+
+h2 {
+	font-size: 16px;
+}
+
+h3 {
+	font-size: 14px;
+}
+
+h4,h5,h6 {
+	font-size: 100%;
+}
+
+address,cite,dfn,em,var {
+	
+}
+
+code,kbd,pre,samp,tt {
+	font-family: "Courier New", Courier, monospace;
+}
+
+small {
+	font-size: 12px;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+a {
+	color: #333;
+	cursor: pointer;
+	text-decoration: underline;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #757575;
+}
+
+legend {
+	color: #000;
+}
+
+fieldset,img {
+	border: none;
+}
+
+button,input,select,textarea {
+	font-size: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	*color: #fff;
+}
+
+/* ------------ */
+body {
+	font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	background-attachment: scroll;
+	color: #222;
+	background-color: #FFFFFF;
+}
+
+.mainbody {
+	background-image: url(top.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	
+}
+
+.container {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header {
+	height: 120px;
+	position: relative;
+	margin-top: 5px;
+}
+
+.logo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.logo a {
+	float: left;
+}
+
+.headmenu {
+	margin-top: 35px;
+	text-align: right;
+	/*color: #454545;*/
+	color: #CCC;
+	line-height: 24px;
+	float: right;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.headmenu a {
+	color: #CCC;
+}
+
+.headframe {
+	position: absolute;
+	top: 0px;
+	left: 240px;
+}
+
+.footmenu {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #748FAD;
+	background-color: #748FAD;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #ddd;
+	line-height: 30px;
+	height: 10px;
+	margin-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.content {
+	clear: both;
+	margin-bottom: 10px;
+}
+.weblink{
+	/*--border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #ddd;
+	padding: 10px 5px;--*/
+	
+    border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #215F9C;
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #164883;
+}
+.footer {
+	margin: 0px 0 10px 0;
+}
+
+.content_new{
+    width: 55%;
+    float: left;
+    margin-right: 1.69492%;
+    padding: 0px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.article-box {
+    padding: 3px 0;
+    border-bottom: 1px dashed #ddd;
+}
+.article-box .a-img {
+    float: left;
+}
+
+.idx-tuijian .box-img, .idx-tuijian .a-img {
+    position: relative;
+}
+.idx-list .article-box .a-img img {
+    width: 220px;
+    height: 146px;
+}
+.article-box .a-img img {
+    max-width: 250px;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+.article-box-ctt {
+    margin-left: 235px;
+}
+.article-box h4 {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.article-box .box-other {
+    padding: 0;
+}
+.box-other {
+    color: #999;
+    font-size: 12px;
+}
+.box-other .source-quote {
+    margin-right: 5px;
+}
+.source-quote a {
+    color: #999;
+}
+.box-other time {
+    margin-right: 5px;
+}
+.article-summary {
+    color: #666;
+    font-size: 12px;
+}
+
+.t-h2 {
+    height: 32px;
+    line-height: 32px;
+    background-color: #555;
+    padding: 0 12px;
+    position: relative;
+    font-size: 12px;
+}
+.t-h2 .more, .t-h2 em {
+    font-size: 12px;
+    color: #fff;
+    font-style: normal;
+}
+.t-h2 .more {
+    position: absolute;
+    right: 12px;
+    top: 0;
+}
+
+.t-h2 .more, .t-h2 em {
+    font-size: 12px;
+    color: #fff;
+    font-style: normal;
+}
+
+.content_recomm{
+    width: 40%;
+    float: right;
+    margin-right: 0%;
+    padding: 0px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.main_full {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+}

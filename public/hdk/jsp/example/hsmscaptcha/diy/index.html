@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>HSMSCaptcha 自定义模式</title>
+</head>
+<body>
+	<form method="post" action ="verify.jsp" onsubmit="return Verify()">
+		<div>手机号码</div>
+		<div><input type="text" name="HSMSCaptchaTel" id="HSMSCaptchaTel"/><input type="button" value="发送" onclick="javascript:Send()"/></div>
+		<div>验证码</div>
+		<div><input type="text" name="HSMSCaptchaValue" id="HSMSCaptchaValue"/><input type="submit" value="校验"/></div>
+	</form>
+</body>
+</html>
+<script type="text/javascript">
+var HSMSCaptcha_SendURL = "send.jsp";
+function IsTel(tel){
+	tel = tel.replace(/(^\s+|\s+$)/g,"");
+	if(tel.length != 11 || tel*1 != tel){
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+function Send(){
+	if(IsTel(document.getElementById('HSMSCaptchaTel').value) == false){
+		alert("请输入合法手机号码！");
+		document.getElementById('HSMSCaptchaTel').focus();
+		return false;
+	}
+	
+	try{
+		request = new ActivexObject("Msxml2.XMLHTTP");
+	}
+	catch(e1){
+		try{
+			request = new ActivexObject("Microsoft.XMLHTTP");
+		}
+		catch(e2){
+			request = false;
+		}
+	}
+	if(!request && typeof XMLHttpRequest != 'undefined'){
+		request = new XMLHttpRequest();
+	}
+
+	if(request == false){
+		return false;
+	}
+	else{
+		try{
+			request.open("post", HSMSCaptcha_SendURL, true);
+			request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
+			request.onreadystatechange = HSMSCaptcha_GetSendResult;
+			request.send("HSMSCaptchaTel="+document.getElementById('HSMSCaptchaTel').value);
+		}
+		catch(e3){
+			return false;
+		}
+	}
+}
+function HSMSCaptcha_GetSendResult(){
+	if(request.readyState == 4 && request.status == 200){
+		if(request.responseText == 1){
+			alert("发送成功！");
+		}
+		else{
+			alert("发送失败！");
+		}
+	}
+}
+function Verify(){
+	if(IsTel(document.getElementById('HSMSCaptchaTel').value) == false){
+		alert("校验失败，请先填写正确手机号码并发送！");
+		document.getElementById('HSMSCaptchaTel').focus();
+		return false;
+	}
+	else if(document.getElementById('HSMSCaptchaValue').value.replace(/(^\s+|\s+$)/g,"") == ""){
+		alert("校验失败，请填写校验码！");
+		document.getElementById('HSMSCaptchaValue').focus();
+		return false;
+	}
+}
+</script>

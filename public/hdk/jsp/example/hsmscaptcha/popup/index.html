@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>HSMSCaptcha 组件弹出模式</title>
+</head>
+<body>
+	<form method="post" action="verify.jsp" onsubmit="return submitVerify()">
+	<script type="text/javascript">var HSMSCaptcha_SendURL = "send.jsp";</script><script type="text/javascript" src="https://api.hinsite.com/index.php?u=hsmscaptcha&s=popup&k=81e983145466549944d88fe156c1c2e7"></script><input type="text" id="HSMSCaptchaValue" name="HSMSCaptchaValue" onfocus="javascript:HSMSCaptcha.PopUp(this)" value="点击弹出验证码" />
+	<input type="submit" value="校验" />
+	</form>
+</body>
+</html>
+<script type="text/javascript">
+function submitVerify(){
+	if(HSMSCaptcha.GetTelValue().length <= 0){
+		alert("校验失败，填写手机号码并发送验证码！");
+		HSMSCaptcha.SetTelFocus();
+		return false;
+	}
+	if(HSMSCaptcha.GetCaptchaValue().length <= 0){
+		alert("校验失败，请填写校验码！");
+		HSMSCaptcha.SetCaptchaFocus();
+		return false;
+	}
+}	
+</script>

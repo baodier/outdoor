@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>HSMSCaptcha JS支持</title>
+</head>
+<body>
+	<form method="post" action="verify.jsp" onsubmit="return submitVerify()">
+	<script type="text/javascript">var HSMSCaptcha_SendURL = "send.jsp";</script><script type="text/javascript" src="https://api.hinsite.com/index.php?u=hsmscaptcha&s=js&k=81e983145466549944d88fe156c1c2e7"></script>
+	<div>手机号码</div>
+	<div><input type="text" name="HSMSCaptchaTel" id="HSMSCaptchaTel" /><input type="button" value="发送" onclick="javascript:Send()" /></div>
+	<div>验证码</div>
+	<div><input type="text" name="HSMSCaptchaValue" id="HSMSCaptchaValue" /><input type="submit" value="校验" /></div>
+	</form>
+</body>
+</html>
+<script type="text/javascript">
+function Send(){
+	if(HSMSCaptcha.IsTel(document.getElementById('HSMSCaptchaTel').value) == false){
+		alert("请输入合法手机号码！");
+		document.getElementById('HSMSCaptchaTel').focus();
+		return false;
+	}
+	HSMSCaptcha.Send(document.getElementById('HSMSCaptchaTel').value);
+}
+
+function HSMSCaptcha_GetSendResult(){ 
+	if(HSMSCaptchaSendResult == 1){
+		alert("验证码发送成功！");
+	}
+	else{
+		alert("验证码发送失败！");
+	}
+}
+
+function submitVerify(){
+	if(document.getElementById('HSMSCaptchaValue').value == ""){
+		alert("校验失败，请填写校验码！");
+		document.getElementById('HSMSCaptchaValue').focus();
+		return false;
+	}
+}
+</script>

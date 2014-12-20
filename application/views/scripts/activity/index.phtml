@@ -1,0 +1,141 @@
+
+<link href="/css/tl_style.css" type="text/css" rel="stylesheet"/>
+
+<?php echo $this->render('login/navbar_login.phtml') ?>
+
+<div class="container-fluid container" >
+    <div class="row-fluid">
+        <div class="span9" style="padding-top: 100px">
+
+        <div id="mainbar">
+        <div class="subheader">
+            <h1>校园活动</h1>
+            <div id="tabs">
+                <a href="/book/preview?sort=vote">全部</a>
+                <a class="<?php if($this->action == 'play') echo 'youarehere' ?>" href="/activity/play">演出</a>
+                <a href="/book?sort=month">电影</a>
+                <a href="/book/read?sort=all">讲座</a>
+                <a href="/book/read?sort=vote">学生活动</a>
+                <a href="/book/read?sort=tag">宣讲会</a>
+
+            </div>
+        </div>
+
+        <div class="subtabs" id="tabs-interval">
+            <a class="<?php if($this->type == 'end') echo 'youarehere' ?>" href="/book/ebook?sort=free">已结束</a>
+            <a class="<?php if($this->type == 'sale') echo 'youarehere' ?>" href="/book/ebook?sort=free">售票中</a>
+            <a class="<?php if($this->type == 'wait') echo 'youarehere' ?>" href="/book/ebook?sort=all">待售票</a>
+            <a class="<?php if($this->type == 'all') echo 'youarehere' ?>" href="/activity/play/all">全部</a>
+        </div>
+
+        <div class="alert alert-success clearfix clearboth" style="padding-right: 12px;">
+        </div>
+
+        <div class="book-items">
+
+            <div class="row book-item">
+                <div class="span1">
+                    <div class="stats">
+                        <div class="votes">
+                            <strong>68</strong>喜欢
+                        </div>
+                        <div class="answered">
+                            <strong>12</strong>评论
+                        </div>
+
+                    </div>
+                    <div class="views-orange">售票中</div>
+                </div>
+                <div class="span8">
+                    <h3>
+                        <a class="question-hyperlink" href="/book/51">幽兰雅韵——北方昆曲剧院经典折子戏清华大学专场</a>
+                    </h3>
+                    <div class="status-date">
+                        [演出方] 北方昆曲剧院  　
+                        [时间] 2013-7-18 19:30:00  　　
+                    </div>
+                    <p>
+                        　　演出剧目：
+
+                        《天下乐·钟馗嫁妹》
+
+                        　　《钟馗嫁妹》是明末清初张大复所作《天下乐》中的一折。唐人钟馗，学问极好，相貌原来也很端正。家贫不能应举，蒙友杜平资助上京赶考。不料在去长安路上，误入阴山鬼径   <a href="/book/51">[…]</a>
+                    </p>
+                    <p>
+                        <a class="post-tag" href="/book/tagged/47" tagid="47">售票中</a>
+                        <a class="post-tag" href="/book/tagged/281" tagid="281">昆曲</a>
+                        <a class="post-tag" href="/book/tagged/438" tagid="438">折子戏</a>
+                    </p>
+                </div>
+                <div class="span3" >
+                    <a href="/book/51" class="book-cover-box pull-right">
+                        <img  class="bookcover" alt="iPhone与iPad开发实战" src="/img/demo2.jpeg">
+                        <span class="ebook"></span>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="dashed">
+
+            <div class="row book-item">
+                <div class="span1">
+                    <div class="stats">
+                        <div class="votes">
+                            <strong>68</strong>喜欢
+                        </div>
+                        <div class="answered">
+                            <strong>12</strong>评论
+                        </div>
+
+                    </div>
+                    <div class="views-orange">售票中</div>
+                </div>
+                <div class="span8">
+                    <h3>
+                        <a class="question-hyperlink" href="/book/51">幽兰雅韵——北方昆曲剧院经典折子戏清华大学专场</a>
+                    </h3>
+                    <div class="status-date">
+                        [演出方] 北方昆曲剧院  　
+                        [时间] 2013-7-18 19:30:00  　　
+                    </div>
+                    <p>
+                        　　演出剧目：
+
+                        《天下乐·钟馗嫁妹》
+
+                        　　《钟馗嫁妹》是明末清初张大复所作《天下乐》中的一折。唐人钟馗，学问极好，相貌原来也很端正。家贫不能应举，蒙友杜平资助上京赶考。不料在去长安路上，误入阴山鬼径   <a href="/book/51">[…]</a>
+                    </p>
+                    <p>
+                        <a class="post-tag" href="/book/tagged/47" tagid="47">售票中</a>
+                        <a class="post-tag" href="/book/tagged/281" tagid="281">昆曲</a>
+                        <a class="post-tag" href="/book/tagged/438" tagid="438">折子戏</a>
+                    </p>
+                </div>
+                <div class="span3" >
+                    <a href="/book/51" class="book-cover-box pull-right">
+                        <img  class="bookcover" alt="iPhone与iPad开发实战" src="/img/demo2.jpeg">
+                        <span class="ebook"></span>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="dashed">
+
+
+            <div class="PagedList-pager">
+                <?php echo $this->sepHtml; ?>
+            </div>
+
+        </div>
+
+        </div>
+        </div>
+
+        <div class="span3" style="padding-top: 100px">
+            <!--Body content-->
+
+        </div>
+    </div>
+</div>
+
+<?php echo $this->render('index/footer.phtml') ?>

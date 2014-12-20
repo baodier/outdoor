@@ -1,0 +1,101 @@
+
+<link href="/css/p_set.css" type="text/css" rel="stylesheet"/>
+<link href="/css/password_strength.css" type="text/css" rel="stylesheet"/>
+
+<?php echo $this->render('index/navbar_index.phtml') ?>
+
+<?php
+if($this->olduser){
+    $text = "
+        <div id=\"nonMemContent\" class=\"com_center_login_content1\" style=\"margin-top: 150px\">
+                <div class=\"com_center_login_nonMemtip\">
+                    <div class=\"com_center_login_nonMemtip1 \">
+                        <span class=\"com_center_login_tick_green\"></span>您的账号已经激活过了，请直接登录系统！</div>
+                </div>
+                <hr />
+        </div>
+    ";
+    echo $text;
+}
+
+else if($this->validate){
+    $text = "
+        <div id=\"nonMemContent\" class=\"com_center_login_content1\" style=\"margin-top: 150px\">
+                <div class=\"com_center_login_nonMemtip\">
+                    <div id=\"change_title\" class=\"com_center_login_nonMemtip1 \">创建账号</div>
+                </div>
+                <hr />
+                <div id=\"registerTable\" class=\"info_tab\" style=\"text-align: center\">
+                    <div class=\"tab_row\">
+                        <div class=\"tab_title\">您的账号：</div>
+                        <div class=\"tab_title\">".$this->email."</div>
+                        <input type='hidden' id='emailVal' value='".$this->email."' />
+                    </div>
+
+                    <div class=\"tab_row\">
+                        <div class=\"tab_title\">设置密码：</div>
+                        <div class=\"tab_input\"><input type=\"password\" id=\"new_pwd\" name=\"new_pwd\"></div>
+                        <div class=\"tab_info s_textc\">
+                            <div class=\"focus_info\" style=\"display:none\">密码由6~16位半角字符（字母、数字、符号）组成，区分大小写</div>
+                            <div class=\"error_info\" style=\"display:none\"><span class=\"errorinfo_txt\"></span></div>
+                            <div class=\"success_info\" style=\"display:none\"><span class=\"errorinfo_txt\">密码合法</span></div>
+                        </div>
+                    </div>
+
+                    <div class=\"tab_row\">
+                        <div class=\"tab_title\">密码强度：</div>
+                        <div class=\"tab_input\"><div id=\"passwordStrengthDiv\" class=\"is0\" style=\"margin-top: 10px\"></div></div>
+                    </div>
+
+                    <div class=\"tab_row\">
+                        <div class=\"tab_title\">确认密码：</div>
+                        <div class=\"tab_input\"><input type=\"password\" class=\"\" id=\"new_pwd_sure\"/></div>
+                        <div class=\"tab_info s_textc\">
+                            <div class=\"focus_info\" style=\"display:none\">密码由6~16位半角字符（字母、数字、符号）组成，区分大小写</div>
+                            <div class=\"error_info\" style=\"display:none\"><span class=\"errorinfo_txt\"></span></div>
+                            <div class=\"success_info\" style=\"display:none\"><span class=\"errorinfo_txt\">输入一致</span></div>
+                        </div>
+                    </div>
+
+                    <div class=\"tab_row\">
+                        <div class=\"tab_title\">您的昵称：</div>
+                        <div class=\"tab_input\"><input type=\"text\" class=\"\" id=\"new_name\"/></div>
+                        <div class=\"tab_info s_textc\">
+                            <div class=\"focus_info\" style=\"display:none\">昵称由2~16位字符（字母、数字、符号、汉字）组成</div>
+                            <div class=\"error_info\" style=\"display:none\"><span class=\"errorinfo_txt\"></span></div>
+                            <div class=\"success_info\" style=\"display:none\"><span class=\"errorinfo_txt\">昵称合法</span></div>
+                        </div>
+                    </div>
+
+                    <button class=\"btn btn-primary btn-large\" id=\"registerBtn\">完成创建</button>
+                 </div>
+        </div>
+
+    ";
+    echo $text;
+}
+
+else{
+    $text = "
+            <div id=\"nonMemContent\" class=\"com_center_login_content1\" style=\"margin-top: 150px\">
+                <div class=\"com_center_login_nonMemtip\">
+                    <div class=\"com_center_login_nonMemtip1 \">
+                        <span class=\"com_center_login_tick_green\"></span>无效的激活链接！</div>
+                </div>
+                <hr />
+                <div class=\"com_center_login_registerinstruction\">
+                    返回<a href=\"/#\">重新注册</a>
+                </div>
+            </div>
+    ";
+    echo $text;
+}
+?>
+
+<?php echo $this->render('index/footer.phtml') ?>
+
+<script src="/js/userpassword.js" language="javascript"></script>
+<script src="/js/jquery.passwordStrength.js"></script>
+<script language="javascript" type="text/javascript">
+    $("#new_pwd").passwordStrength();
+</script>

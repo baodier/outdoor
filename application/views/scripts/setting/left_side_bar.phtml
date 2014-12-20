@@ -1,0 +1,13 @@
+<div class="well" style="max-width: 340px; padding: 8px 0;">
+    <ul class="nav nav-list" style="font-size: 14px">
+        <li class="nav-header" style="font-size: 16px">个人资料</li>
+        <li class="<?php if($this->type=='index') echo "active" ?>"><a href="#">基本信息</a></li>
+        <li><a href="/setting/edu">教育信息</a></li>
+        <li><a href="/setting/tag">个人标签</a></li>
+        <li class="divider"></li>
+        <li class="nav-header <?php if($this->type=='avatar') echo "active" ?>" style="font-size: 16px"><a href="/setting/avatar">上传头像</a></li>
+        <li class="divider"></li>
+        <li class="nav-header" style="font-size: 16px"><a href="/setting/avatar">修改密码</a></li>
+        <li class="divider"></li>
+    </ul>
+</div> <!-- /well -->

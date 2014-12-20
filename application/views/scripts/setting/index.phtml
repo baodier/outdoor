@@ -1,0 +1,75 @@
+<link href="/css/p_set.css" type="text/css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet">
+<link href="/css/frame.css" rel="stylesheet">
+
+<?php echo $this->render('login/navbar_login.phtml') ?>
+
+<div class="container-fluid container" style="padding-top: 85px">
+    <div class="row-fluid">
+        <div class="span2" style="padding-top: 30px">
+            <!--Sidebar content-->
+            <?php echo $this->render('setting/left_side_bar.phtml') ?>
+        </div>
+        <div class="span10" style="padding-top: 30px">
+            <!--Body content-->
+            <div class="hero-unit">
+                <div class="rl_box01">
+                    <h3 class="s_linecolor"><span>基本信息</span><span class="s_textc unfb ml10">( <span class="red">*</span>为必填项 )</span></h3>
+                </div>
+
+                <div class="rr_box02_cont">
+                    <table cellspacing="0" cellpadding="0" class="r_tab_01">
+                        <tbody>
+                        <tr><th>昵称：</th>
+                            <td><?php echo $_SESSION['user']['username'];?></td></tr>
+                        <tr><th>邮箱：</th>
+                            <td><?php echo $_SESSION['user']['email'];?></td></tr>
+                        <tr><th>真实姓名：</th>
+                            <td><input type="text" id="real_name" value=""><label id="tip_real_name" class="hidden"></label></td></tr>
+
+
+                        <tr><th>所在大学：</th>
+                            <td><input type="text" id="university_radio" dm="" value="">
+                            </td></tr>
+                        <tr><th>院系：</th>
+                            <td></td> </tr>
+
+                        <tr><th>家乡：</th>
+                            <td><input type="text" id="hometown_radio" dm="" value="">
+                            </td></tr>
+                        <tr><th>毕业中学：</th>
+                            <td><input type="text" id="school_radio" dm="" value="">
+                            </td></tr>
+
+                        <tr><th>手机：</th>
+                            <td>
+                                <input type="text" id="mobile" value="">
+                                <a href="javascript:void(0)" class="ml10 blue03" id="mobile_active" uname="">手机绑定</a>
+                                <label id="tip_tel" class="hidden"></label>
+                            </td>
+                        </tr>
+                        <tr><th>QQ：</th>
+                            <td><input type="text" id="qq" value=""><label id="tip_qq" class="hidden"></label></td></tr>
+                        <tr><th>MSN：</th>
+                            <td><input type="text" id="msn" value=""><label id="tip_msn" class="hidden"></label></td></tr>
+                        <tr><th>个性介绍：</th>
+                            <td><label><textarea id="description" cols="45" rows="3"></textarea></label></td></tr>
+
+                        <tr><td colspan="2" id="massageF" style="display:none;">
+                                <label class="success"></label>
+                            </td>
+                        </tr>
+
+                        <tr><th>&nbsp;</th>
+                            <td><a href="javascript:void(0)" class="btn">保存</a></td></tr>
+
+                        </tbody></table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo $this->render('index/footer.phtml') ?>
+
+

@@ -1,0 +1,63 @@
+<?php echo $this->render('index/navbar_index.phtml') ?>
+
+<?php
+if($this->olduser){
+    $text = "
+            <div id=\"nonMemContent\" class=\"com_center_login_content1\" style=\"margin-top: 150px\">
+                <div class=\"com_center_login_nonMemtip\">
+                    <div class=\"com_center_login_nonMemtip1 \">
+                        <span class=\"com_center_login_tick_green\"></span>您的账号已经激活过了，请直接登录系统！</div>
+                </div>
+                <hr />
+            </div>
+    ";
+    echo $text;
+}
+else if($this->validate){
+
+    $text = "
+            <div id=\"nonMemContent\" class=\"com_center_login_content1\" style=\"margin-top: 150px\">
+                <div class=\"com_center_login_nonMemtip\">
+                    <div class=\"com_center_login_nonMemtip1 \">
+                        <span class=\"com_center_login_tick_green\"></span>马上激活邮件，完成注册吧！</div>
+                    <div class=\"com_center_login_nonMemtip2\">
+                验证邮件已经发往您的邮箱，<span class=\"com_center_login_emailAddress\">".$this->email."</span></div>
+                <div class=\"com_center_login_nonMemtip3\">
+                    点击邮件里的确认链接即可激活帐号！</div>
+                </div>
+                <hr />
+                <div class=\"com_center_login_registerinstruction\">
+                    还没有收到激活邮件？
+                    <br />
+                    &#8226;尝试到广告邮件，垃圾邮件目录里找找看
+                    <br />
+                    &#8226;联系客服邮箱：hulantao@gmail.com 反馈情况</a>。<br />
+                    &#8226;邮件地址写错了？很抱歉，你需要<a href=\"/#\">重新注册</a>
+                </div>
+            </div>
+    ";
+    echo $text;
+}
+else{
+    $text = "
+            <div id=\"nonMemContent\" class=\"com_center_login_content1\" style=\"margin-top: 150px\">
+                <div class=\"com_center_login_nonMemtip\">
+                    <div class=\"com_center_login_nonMemtip1 \">
+                        <span class=\"com_center_login_tick_green\"></span>邮箱格式错误，请使用有效的校园邮箱！</div>
+                </div>
+                <hr />
+                <div class=\"com_center_login_registerinstruction\">
+                    还没有收到激活邮件？
+                    <br />
+                    &#8226;尝试到广告邮件，垃圾邮件目录里找找看
+                    <br />
+                    &#8226;联系客服邮箱：hulantao@gmail.com 反馈情况</a>。<br />
+                    &#8226;邮件地址写错了？很抱歉，你需要<a href=\"/#\">重新注册</a>
+                </div>
+            </div>
+    ";
+    echo $text;
+}
+?>
+
+<?php echo $this->render('index/footer.phtml') ?>

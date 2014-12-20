@@ -1,0 +1,141 @@
+.pane_default {
+	overflow: hidden;
+	margin: 0 0 10px;
+}
+
+.pane_default .pane_T{
+	display: none;
+}
+
+.pane_default .pane_T_l{
+}
+
+.pane_default .pane_T_r{
+}
+
+.pane_default .pane_T_c{
+}
+
+.pane_default .pane_C{
+	background-color: #FFF;
+	border: 1px solid #EBEBEb;
+}
+.pane_default .pane_C_l{
+}
+
+.pane_default .pane_C_r{
+}
+
+.pane_default .pane_C_c{
+	padding: 10px 14px;	
+}
+
+.pane_default .pane_M{	
+	display: none;
+}
+.pane_default .pane_M_l{	
+}
+
+.pane_default .pane_M_r{
+}
+
+.pane_default .pane_M_c{
+}
+
+
+/*  带主题 */
+
+
+.pane_default_t {
+	overflow: hidden;
+	margin: 0 0 10px;
+}
+
+.pane_default_t .pane_T{
+	background-color: #FFF;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #EBEBEb;
+	border-right-color: #EBEBEb;
+	border-bottom-color: #EBEBEb;
+	border-left-color: #EBEBEb;
+	background-image: url(/pane/default/../image/bg.png);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+}
+
+.pane_default_t .pane_T_l{
+}
+
+.pane_default_t .pane_T_r{
+}
+
+.pane_default_t .pane_T_c{
+}
+
+
+.pane_default_t .pane_C{
+	background-color: #FFF;
+	border: 1px solid #EBEBEb;
+}
+.pane_default_t .pane_C_l{
+}
+
+.pane_default_t .pane_C_r{
+}
+
+.pane_default_t .pane_C_c{
+	padding: 10px 14px;	
+}
+
+.pane_default_t .pane_M{	
+	display: none;
+}
+.pane_default_t .pane_M_l{	
+}
+
+.pane_default_t .pane_M_r{
+}
+
+.pane_default_t .pane_M_c{
+}
+
+
+/* 标题 */
+
+
+.pane_default_t .pane_T_c h3{
+	height: 30px;
+	line-height: 30px;
+	line-height: 34px\9;
+	margin:0;
+	padding:0;
+}
+
+.pane_default_t .pane_T_c h3 span {
+	background-image: url("/pane/default/../image/v.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    padding-left: 16px;
+}
+
+.pane_default_t .pane_T_c a {
+	
+	text-decoration: none;
+	display: inline;
+	float: right;
+	margin-right: 10px;
+	margin-top: 8px;
+}
+
+
