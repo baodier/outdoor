@@ -22,19 +22,109 @@
         <link rel="stylesheet" href="/css/ueditor.css"/>
         <link rel="stylesheet" type="text/css" href="/css/part_default.css?CyldJo" />
         <link rel="stylesheet" type="text/css" href="/css/pane_default.css?CyldJo" />
-        <link rel="stylesheet" type="text/css" href="/css/tag_default.css?CyldJo" />
+
         <script type="text/javascript" src="/js/part_default.js?CyldJo"></script>
         <script type="text/javascript" src="/js/tag_default.js?CyldJo"></script>
         <link rel="stylesheet" href="/css/mF_expo2010.css">
         <script type="text/javascript" src="/js/part_default.js?CyldJo"></script>
         <script type="text/javascript" src="/js/tag_default.js?CyldJo"></script>
-
+        <link rel="stylesheet" href="/css/slides.css">
 
     </head>
     <body>
 
     <div class="mainbody">
         <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="/" seed="logo">
+                        <img src="/img/xueying_small.png" style="width:auto;height:auto;" border="0" alt="">
+                    </a>
+                </div>
+
+                <div class="headmenu">
+                    <br>
+                    全国统一咨询电话：(+86) 0891-6363321
+                    <br>
+                    <div class="tag_search_min">
+                        <form id="HnAOsB" method="post" name="search" action="http://www.tibetoutdoors.com/search/" onsubmit="ajaxp(this.id);return false;">
+                            <input id="tag_search_min_mod" name="bymod" type="hidden" value="">
+                            <a id="tag_search_min_title" href="javascript:;" class="show_select2" onmouseover="showMenu(this.id)">全部</a>
+                            <input class="tag_search_min_keyword" id="tag_search_min_keyword" value="请输入关键字" onfocus="deleteSearchKey('tag_search_min_keyword','请输入关键字')" onblur="setSerchKey('tag_search_min_keyword','请输入关键字')" name="q">
+                            <input class="tag_search_min_input" value="搜索" type="image" src="/img/bg.jpg">
+                        </form>
+                    </div>
+
+                    <script type="text/javascript">
+                        function deleteSearchKey(k,v)
+                        {
+                            window.location.href="/login";
+                            var name = document.getElementById(k).value;
+                            if (name == v)
+                                document.getElementById(k).value = "";
+                        }
+
+                        function setSerchKey(k,v)
+                        {
+                            var name = document.getElementById(k).value;
+                            if (name == "")
+                                document.getElementById(k).value = v;
+                        }
+                    </script>
+
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+           <!-- <ul id="css3menu1" class="topmenu">
+                <li class="topfirst">
+                    <a href="http://www.tibetoutdoors.com/"><span>首页</span></a>
+                </li>
+
+                <li class="topmenu">
+                    <a target="_blank" href="http://www.tibetoutdoors.com/ZhuanTiHuoDong/"><span>雪山攀登</span></a>
+                </li>
+
+                <li class="topmenu">
+                    <a href="http://www.tibetoutdoors.com/GaoYuanTuBu/"><span>高原徒步</span></a>
+                </li>
+
+                <li class="topmenu">
+                    <a href="http://www.tibetoutdoors.com/DengShanFuWu/"><span>境外徒步</span></a>
+                </li>
+
+                <li class="topmenu">
+                    <a href="http://www.tibetoutdoors.com/GaoYuanLuYing/">深度旅游</a>
+                </li>
+
+                <li class="topmenu">
+                    <a href="http://www.tibetoutdoors.com/ShenDuLvYou/"><span>定制服务</span></a>
+                </li>
+
+                <li class="topmenu">
+                    <a target="_blank" href="http://www.tibetoutdoors.com/GuanYuWoMen/"><span>关于我们</span></a>
+                </li>
+
+                <li class="toplast">
+                    <a target="_blank" href="http://www.tibetoutdoors.com/LianXiWoMen/">联系我们</a>
+                </li>
+
+            </ul>
+-->
+            <div class="nav">
+                <ul>
+                    <li><a href="/" target="_blank">首页</a></li>
+                    <li><a href="http://www.iqilu.com/html/shouquan/tongzhi/" target="_blank">雪山攀登</a></li>
+                    <li><a href="http://www.iqilu.com/html/shouquan/fayanren/" target="_blank">高原徒步</a></li>
+                    <li><a href="http://news.iqilu.com/shandong/zhengwu/" target="_blank">境外徒步</a></li>
+                    <li><a href="http://www.iqilu.com/html/shouquan/zhengce/" target="_blank">深度旅游</a></li>
+                    <li><a href="http://www.iqilu.com/html/shouquan/sqsxwfb/" target="_blank">定制服务</a></li>
+                    <li><a href="http://www.iqilu.com/html/shouquan/peixun/" target="_blank">关于我们</a></li>
+                    <li><a href="http://www.iqilu.com/html/shouquan/dwjs/" target="_blank">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="clr"></div>
+            <div style="margin-bottom: 10px"></div>
             <?php echo $this -> layout() -> content;?>
         </div>
     </div>

@@ -305,3 +305,11 @@ img {
     margin-bottom: 15px;
     padding: 7px 9px;
 }
+
+
+.nav{padding-top: 0px;width: 980px;margin: 0 auto;}
+.nav ul{overflow: hidden;zoom: 1;}
+.nav li{display: block;float: left;border-right:#3793c2 1px solid;}
+.nav li a{display: block;float:left;width: 97px; height: 40px;line-height: 44px;border-bottom: #0075b0 5px solid;background: #0075b0;
+    color: #fff;font-size: 16px;font-family: '微软雅黑';text-align: center;padding: 0 12px;text-decoration:none;}
+.nav li a:hover{background:#00679b ;border-color: #004c72;text-decoration: none;}
